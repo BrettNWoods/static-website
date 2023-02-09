@@ -5,7 +5,7 @@ This repo will set up a static website using the contents of (index.html)[] by h
 
 # Prerequisites 
 
-* [awscli)](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) 
+* [awscli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) 
 * [make](https://www.gnu.org/software/make/) 
 * An IAM User or Role with permissions to; 
     * Create S3 Buckets 
