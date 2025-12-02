@@ -1,4 +1,4 @@
-BUCKET_NAME = robsstaticsite
+BUCKET_NAME = robsstaticsite-test
 FILE_NAME = index.html
 REGION = ap-southeast-2
 BUCKET_POLICY=\
@@ -25,7 +25,7 @@ set-static-website:
 	aws s3 website s3://$(BUCKET_NAME)/ --index-document $(FILE_NAME)
 
 grant-public-read-access:
-
+	aws s3api delete-public-access-block --bucket $(BUCKET_NAME)
 	aws s3api put-bucket-policy --bucket $(BUCKET_NAME) --policy $(BUCKET_POLICY)
 
 host-site: create-bucket upload-file set-static-website grant-public-read-access
